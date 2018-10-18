@@ -1,15 +1,35 @@
-var ninja = {}; // function
+var ninja = {}; // object
 ninja.data = {};
 
 function hide(ninja) {
     ninja.visibility = false;
 }
 
-hide(ninja); // function passed as argument
+hide(ninja); // object passed as argument
 
-// returning new function
+// returning new object
 function returnNewNinja() {
     return {};
 }
 
-ninja.name = "Hanzo"; // function properties
+ninja.name = "Hanzo"; // object properties
+
+// =======================================================================
+
+function ninjaFunction() {}
+
+ninja.data = function(){};
+
+function call(ninjaFunction) {
+    ninjaFunction();
+}
+
+call(function(){});
+
+function returnNewNinjaFunction() {
+    return function(){};
+}
+
+var ninjaFunctionVar = function(){};
+ninjaFunctionVar.name = "Hanzo Again";
+
